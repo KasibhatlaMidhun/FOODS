@@ -15,11 +15,86 @@ html {
     font-size: 62.5%;
 }
 
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 14rem;
+    background-color: #000;
+    position: fixed;
+    top: -13.5rem;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0.2rem 0.2rem 0.2rem #000;
+    transition: top .4s;
+}
+
+.navbar.change {
+    top: 0;
+    transition: top .4s .2s;
+}
+
+.navbar-link {
+    color: #aaa;
+    margin: 0 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.navbar-link:hover {
+    color: #fff;
+}
+
+.navbar-link i {
+    font-size: 4rem;
+}
+
+.navbar-link span {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.menu {
+    width: 4rem;
+    height: 6rem;
+    background-color: #000;
+    position: fixed;
+    top: 2rem;
+    left: 5rem;
+    z-index: 10;
+    border-radius: 30rem 30rem 15rem 15rem;
+    box-shadow: .1rem .1rem .1rem #000, -0.1rem -0.1rem 0.1rem #000;
+    cursor: pointer;
+    transition: top .4s .2s;
+}
+
+.menu.change {
+    top: 15rem;
+    transition: top .4s;
+}
+
+.menu::before {
+    content: "";
+    width: 0.3rem;
+    height: 15rem;
+    background-color: #000;
+    position: absolute;
+    top: -15rem;
+    left: calc(50% - 0.15rem);
+    box-shadow: 0.1rem 0 0.1rem #000;
+}
+
 /* Section 1 */
 .section1 {
     width: 100%;
     height: 100vh;
-    background-color: #333;
+    background-color: rgb(2, 39, 61);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,10 +113,10 @@ html {
 
 .section1-icons i {
     font-size: 20rem;
-    color: #a79a2d;
+    color: #853507;
     position: absolute;
     transform: translate(-50%, -50%) scale(0);
-    text-shadow: .2rem .2rem .2rem #000;
+    text-shadow: .2rem .2rem .2rem rgb(0, 0, 0);
     transition: transform .3s;
 }
 
@@ -69,7 +144,7 @@ html {
     text-transform: capitalize;
     letter-spacing: 0.5rem;
     text-shadow: .3rem .3rem .3rem #000;
-    margin-top: -5%;
+    margin-top: -4%;
 }
 
 .cards-container {
@@ -80,9 +155,9 @@ html {
 .cards {
     width: 24rem;
     height: 36rem;
-    background-color: #a79a2d;
+    background-color: #7a5105;
     padding: 4rem;
-    margin-top: 5%;
+    margin-top: 5.4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,7 +177,7 @@ html {
     content: "";
     height: 100%;
     width: 1rem;
-    background-color: #817824;
+    background-color: #7a5105;
     position: absolute;
     top: 0;
     left: -1rem;
@@ -115,7 +190,7 @@ html {
     content: "";
     height: 1rem;
     width: 100%;
-    background-color: #8f8317;
+    background-color: #7a5105;
     position: absolute;
     top: -1rem;
     left: 0;
@@ -155,7 +230,7 @@ html {
 
 /* Section 3 */
 .section3 {
-    background-color: #333;
+    background-color: rgb(56, 2, 2);
     padding: 5rem 0;
 }
 
@@ -272,7 +347,7 @@ html {
 .section4 {
     width: 100%;
     height: 30vh;
-    background-color: #222;
+    background-color: rgb(53, 83, 4);
     display: flex;
     justify-content: space-around;
     padding: 3rem 0;
@@ -281,12 +356,13 @@ html {
 
 .section4-text {
     text-transform: uppercase;
+    margin-top: 2.5rem;
 }
 
 .section4-heading {
     font-size: 4rem;
     font-weight: 900;
-    color: #a79a2d;
+    color: #dbdf0b;
 }
 
 .section4-paragraph {
@@ -304,7 +380,7 @@ html {
     width: 35rem;
     height: 5rem;
     padding: 1rem;
-    border: .2rem solid #166d04;
+    border: .2rem solid rgb(104, 40, 3);
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: .1rem;
@@ -320,9 +396,10 @@ html {
     left: -4.5rem;
     width: 4rem;
     height: 4rem;
-    background-color: rgb(214, 228, 22);
+    background-color: rgb(11, 94, 109);
     color: #333;
     border: none;
+    border-radius: .9rem .9rem .9rem .9rem;
     font-size: 1.8rem;
     cursor: pointer;
 }
@@ -342,4 +419,120 @@ html {
 
 .copyright i {
     color: red;
+}
+
+/* Responsive */
+@media (max-width: 1400px) {
+html {
+    font-size: 50%;
+ }
+
+ .section2 {
+    height: auto;
+    padding: 10rem 0 12rem 0;
+ }
+
+ .cards-container {
+    margin-top: 10rem;
+ }
+
+ .gallery-link {
+    width: 40rem;
+    height: 25rem;
+    margin: 5rem;
+ }
+
+ .food-img {
+    width: 100%;
+    height: 100%;
+ }
+}
+
+@media (max-width: 1000px) {
+    .section-heading {
+        font-size: 9rem;
+        margin: 0 5rem;
+    }
+
+    .section1-icons i {
+        font-size: 25rem;
+    }
+
+    .cards-container {
+        flex-wrap: wrap;
+    }
+
+    .cards {
+        margin: 1rem 9rem;
+    }
+
+    .section4 {
+        height: 30rem;
+    }
+    .section4-text {
+        margin-top: 5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar-link {
+        margin: 2rem;
+    }
+
+    .navbar-link i {
+        font-size: 4rem;
+    }
+
+    .navbar-link span {
+        font-size: 2rem;
+    }
+
+    .section4-text {
+        margin-top: 5.5rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .section-heading {
+        font-size: 7rem;
+        margin: 0 10rem;
+    }
+
+    .section1-icons i {
+        font-size: 20rem;
+    }
+
+    .menu {
+        left: 2rem;
+    }
+
+    .section4 {
+        height: 40rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .section4-text {
+        text-align: center;
+    }
+
+    .signup-form {
+        margin-top: 5rem;
+        margin-left: 5rem;
+    }
+}
+
+@media (max-width: 550px){
+    html {
+        font-size: 40%;
+    }
+
+    .navbar-link {
+        margin: 0 0.7rem;
+    }
+
+    .section4-text {
+        margin: 2rem;
+    }
 }
