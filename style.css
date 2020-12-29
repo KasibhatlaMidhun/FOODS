@@ -488,7 +488,7 @@ html {
     }
 
     .cards {
-        margin: 1rem 9rem;
+        margin: 6rem 9rem;
     }
 
     .section4 {
@@ -510,6 +510,10 @@ html {
 
     .navbar-link span {
         font-size: 2rem;
+    }
+
+    .cards {
+        margin: 6rem 9rem;
     }
 
     .section4-text {
